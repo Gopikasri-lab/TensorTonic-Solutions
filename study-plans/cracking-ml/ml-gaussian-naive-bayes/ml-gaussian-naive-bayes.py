@@ -14,7 +14,7 @@ def gaussian_nb(X_train, y_train, X_test):
         m = y_train==c
         val = X_train[m]
         stats[c]={
-            'prior': np.log(len(m)/n),
+            'prior': np.log(len(val)/n),
             'mean' : np.mean(val, axis=0),
             'var' : np.var(val,axis=0) + e 
         }
